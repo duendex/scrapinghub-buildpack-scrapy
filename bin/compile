@@ -233,9 +233,7 @@ puts-step "Installing dependencies using Pip ($PIP_VERSION)"
 # Scrapinghub integration
 bpwatch start sh_scrapy_install
     puts-step "Installing Scrapinghub+Scrapy integration"
-    cd $ROOT_DIR/vendor/sh_scrapy/
     /app/.heroku/python/bin/pip install $ROOT_DIR/vendor/sh_scrapy --exists-action=w --src=./.heroku/src --allow-all-external  | cleanup | indent
-    cd $WORKING_DIR
 bpwatch stop sh_scrapy_install
 
 # Django collectstatic support.

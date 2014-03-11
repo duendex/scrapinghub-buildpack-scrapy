@@ -27,6 +27,9 @@ def _maybe_load_autoscraping_project(s, o):
 
 def _load_addons(addons, s, o):
     for addon in addons:
+        if addon['path'].startswith('hworker'):
+            continue  # ignore missing module
+
         skey = addon['type']
         components = s[skey]
         components[addon['path']] = addon['order']
