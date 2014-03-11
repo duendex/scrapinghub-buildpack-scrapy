@@ -227,7 +227,7 @@ puts-step "Installing dependencies using Pip ($PIP_VERSION)"
 
 # Scrapinghub integration
 bpwatch start sh_scrapy_install
-    puts-step "Installing Scrapinghub+Scrapy integration ($PIP_VERSION)"
+    puts-step "Installing Scrapinghub+Scrapy integration"
     cd $ROOT_DIR/vendor/sh_scrapy/
     python setup.py install &> /dev/null
     cd $WORKING_DIR
