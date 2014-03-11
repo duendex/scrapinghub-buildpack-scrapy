@@ -53,16 +53,16 @@ def _populate_settings_base(defaults_func, spider=None):
 
 def _load_default_settings(o):
     SPIDER_MIDDLEWARES_BASE.update({
-        'hworker.bot.extension.HubstorageMiddleware': 0,
+        'sh_scrapy.extension.HubstorageMiddleware': 0,
     })
     EXTENSIONS_BASE.update({
         'scrapy.contrib.debug.StackTraceDump': 0,
-        'slybot.closespider.SlybotCloseSpider': 0,
-        'hworker.bot.extension.HubstorageExtension': 100,
+        #'slybot.closespider.SlybotCloseSpider': 0,
+        'sh_scrapy.extension.HubstorageExtension': 100,
     })
     o.update({
         'EXTENSIONS_BASE': EXTENSIONS_BASE,
-        'STATS_CLASS': 'hworker.bot.stats.HubStorageStatsCollector',
+        'STATS_CLASS': 'sh_scrapy.stats.HubStorageStatsCollector',
         'MEMUSAGE_ENABLED': True,
         'MEMUSAGE_LIMIT_MB': 512,
         'WEBSERVICE_ENABLED': False,
