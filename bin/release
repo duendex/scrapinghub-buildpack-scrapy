@@ -9,6 +9,5 @@ cat <<EOF
 config_vars:
 
 default_process_types:
-  crawler: python -m sh_scrapy.crawl
-  crawler-list: python -m sh_scrapy.list
+  web: twistd -n slyd
 EOF
